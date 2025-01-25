@@ -17,4 +17,20 @@ func main() {
 		"은 해석된다.\n"
 	fmt.Println(interLiteral)
 
+	// 암묵적 변환을 지원하지 않는다.
+	// 따라서 명시적 변환을 해줘야 한다.
+
+	// int8....int64까지 있다.
+	// 일반적인 int는 64bit 아키텍처에서 int64, 32bit이라면 int32
+
+	var i int = 100
+	var f float32 = float32(i)
+
+	fmt.Println(i, f)
+
+	str := "ABC"
+	bytes := []byte(str)
+
+	// 배열은 [65, 66, 67] 형태로 출력된다.
+	fmt.Println(bytes)
 }
